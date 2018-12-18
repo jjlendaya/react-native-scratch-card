@@ -19,7 +19,7 @@ import com.facebook.react.uimanager.annotations.ReactProp;
 
 public class RNScratchCardManager extends ViewGroupManager<FrameLayout> {
     private ThemedReactContext mContext = null;
-    private Activity mActivity = null;
+//    private Activity mActivity = null;
 
     public static final String REACT_CLASS = "RNScratchCardManager";
     ScratchView scratchView;
@@ -32,7 +32,7 @@ public class RNScratchCardManager extends ViewGroupManager<FrameLayout> {
     @Override
     public FrameLayout createViewInstance(ThemedReactContext reactContext) {
         mContext = reactContext;
-        mActivity = mContext.getCurrentActivity();
+//        mActivity = mContext.getCurrentActivity();
         scratchView = new ScratchView(mContext);
         scratchView.setEraseStatusListener(new ScratchView.EraseStatusListener() {
             @Override
