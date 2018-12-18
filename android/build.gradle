@@ -51,7 +51,7 @@ allprojects {
 
 dependencies {
     api 'com.facebook.react:react-native:+'
-    api 'com.github.mabjardeleza:ScratchView:update-gradle-SNAPSHOT'
+    implementation 'com.github.mabjardeleza:ScratchView:update-gradle-SNAPSHOT'
 }
 
 def configureReactNativePom(def pom) {
