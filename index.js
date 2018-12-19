@@ -22,12 +22,15 @@ class RNScratchCardView extends Component {
 
   listem = (data) => {
     const { ready } = this.state;
-    this.props.getPercent(data.value)
+    if (this.props.getPercent) {
+      this.props.getPercent(data.value);
+    }
     if (data.value >= this.props.maxPercent) {
-
       if (ready) {
         this.setState({ ready: false }, () => {
-          this.props.onEnd()
+          if (this.props.onEnd) {
+            this.props.onEnd();
+          }
         })
       }
     }
